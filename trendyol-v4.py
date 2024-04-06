@@ -28,7 +28,7 @@ class TrendyolScraper:
         return categories
 
     def scrape_trendyol(self, category_url):
-        html_content = requests.get(category_url, headers=self.headers).text
+        html_content = requests.get(category_url + "?sst=BEST_SELLER", headers=self.headers).text
         soup = BeautifulSoup(html_content, 'html.parser')
 
         p_card_divs = soup.find_all('div', class_='p-card-chldrn-cntnr card-border')

@@ -48,7 +48,7 @@ $veriler = $query->fetchAll(PDO::FETCH_ASSOC);
 
     ?>
 
-    <div class="container mx-auto">
+    <div class="container mx-auto shadow p-3">
         <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-2 my-10">
             <?php foreach ($veriler as $veri) : ?>
                 <div class="w-full overflow-hidden flex-col justify-between rounded shadow-lg items-center relative <?= strtolower($veri['brand']) == 'wefood' ? 'border-2 border-orange-600' : '' ?>">

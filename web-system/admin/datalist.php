@@ -6,8 +6,8 @@ if (empty($_SESSION['email'])) {
 }
 require_once '../db.php';
 
-$date = htmlspecialchars($_GET['date']);
-$category = htmlspecialchars($_GET['category']);
+$date = htmlspecialchars($_GET['date'] ?? '');
+$category = htmlspecialchars($_GET['category'] ?? '');
 ?>
 <!doctype html>
 <html lang="tr">
